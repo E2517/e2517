@@ -1,0 +1,27 @@
+name: Time.js
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 22 * * *"
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+      - run: npm install
+      - run: npm run update-readme
+        env:
+          EMAIL_GMAIL: ${{ secrets.EMAIL_GMAIL }}
+      - run: |
+          git config user.name e2517
+          git config user.email ${{ secrets.EMAIL_GMAIL }}
+          git add README.md
+          git commit -m "[clock] Update README"
+          git push origin master

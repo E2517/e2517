@@ -1,0 +1,29 @@
+name: GitHub Actions
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+      - run: npm install
+      - run: npm run update-readme
+        env:
+          EMAIL_GMAIL: ${{ secrets.EMAIL_GMAIL }}
+      - run: |
+          git config user.name e2517
+          git config user.email ${{ secrets.EMAIL_GMAIL }}
+          git add README.md
+          git commit -m "[bot] Update README"
+          git push origin master

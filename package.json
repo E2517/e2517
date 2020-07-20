@@ -1,0 +1,22 @@
+{
+    "name": "e2517",
+    "version": "1.0.0",
+    "description": "e2517 README GitHub profile with GitHub actions",
+    "main": "index.js",
+    "scripts": {
+        "update-readme": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/e2517/e2517.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/e2517/e2517/issues"
+    },
+    "homepage": "https://github.com/e2517/e2517#readme",
+    "dependencies": {}
+}
