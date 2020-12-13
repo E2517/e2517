@@ -4,8 +4,6 @@
 
 # Coders are coders coding codes for coders to code codes
 
-![Alt Text](https://github.com/E2517/e2517/blob/master/images/welcome.gif)
-
 ## Superwooper ®
 
 Superwooper ® is a startup - hobby - for technology lovers. It is currently the reference platform for the construction, configuration and equalization of Subwoofers (DIY), Speakers and Audio-Video equipment.
